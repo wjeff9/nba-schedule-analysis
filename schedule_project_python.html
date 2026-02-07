@@ -10121,6 +10121,17 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Quick note on the cross_rating_diff feature: here, a team's cross rating is its offensive rating (moving average) minus the opponent's defensive rating (moving average). The cross rating difference is the difference between a team's cross rating and its opponent's cross rating. In order to maintain model symmetry, it is the only feature in my model that measures the relative strength of the two teams.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Standardizing-Data">Standardizing Data<a class="anchor-link" href="#Standardizing-Data">¶</a></h2><p>Now that the data has all been compiled into one data frame, we are almost finished!</p>
 <p>The last step before feeding the data into the model is standardizing the data. This step centers the data around a mean of 0 with a standard deviation of 1, which puts features of different units and magnitudes on a level playing field.</p>
 </div>
@@ -10400,6 +10411,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Modeling">Modeling<a class="anchor-link" href="#Modeling">¶</a></h2><p>Finally, we can model the data. I used an ordinary least squares (linear regression) model from the statsmodels library to inspect feature p-values.</p>
+<p>Because the model is used for explanatory purposes, there is no need to split my data into training, validation, and test sets.</p>
 </div>
 </div>
 </div>
